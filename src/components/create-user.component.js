@@ -28,7 +28,7 @@ export default class CreateUser extends Component {
 
     console.log(user);
 
-    axios.post('13.232.242.211:5000/users/add', user)
+    axios.post('http://3.111.35.156:5001/users/add', user)
       .then(res => console.log(res.data));
 
     this.setState({
