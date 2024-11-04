@@ -24,7 +24,7 @@ export default class ExercisesList extends Component {
   }
 
   componentDidMount() {
-    axios.get('13.232.242.211:5000/exercises/')
+    axios.get('http://3.111.35.156:5001/exercises/')
       .then(response => {
         this.setState({ exercises: response.data })
       })
@@ -34,7 +34,7 @@ export default class ExercisesList extends Component {
   }
 
   deleteExercise(id) {
-    axios.delete('13.232.242.211:5000/exercises/'+id)
+    axios.delete('http://3.111.35.156:5001/exercises/'+id)
       .then(response => { console.log(response.data)});
 
     this.setState({
